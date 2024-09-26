@@ -31,7 +31,7 @@ Testing is done by compiling and running the ".ol" programs in the `test` direct
 make test
 ```
 
-This will produce a lot of ".asm" and ".o" files, if you want to remove them:
+This will produce a lot of ".bin", if you want to remove them:
 
 ```
 make clean_test
