@@ -10,7 +10,7 @@ TEST_BIN=$(patsubst $(TESTDIR)/%.o, $(TESTDIR)/%.bin, $(TEST_O))
 .PHONY: default test clean_tests
 
 $(BIN): $(SOURCES)
-	ghc -i$(SRCDIR) -no-keep-o-files -no-keep-hi-files -dynamic -o $(BIN) $(SRCDIR)/Main.hs
+	ghc -i$(SRCDIR) -no-keep-o-files -no-keep-hi-files -dynamic -o $@ $(SRCDIR)/Main.hs
 
 $(TESTDIR)/%.asm: $(TESTDIR)/%.ol $(BIN)
 	./$(BIN) $<
